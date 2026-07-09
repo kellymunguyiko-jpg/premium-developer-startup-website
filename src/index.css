@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand: #16a34a;
+  --color-brand-dark: #15803d;
+  --color-brand-light: #22c55e;
+  --color-brand-soft: #dcfce7;
+  --color-brand-muted: #f0fdf4;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Monaco, monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background: #f7faf7;
+    color: #0f172a;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    overscroll-behavior-y: none;
+  }
+
+  /* App-like when installed as PWA */
+  @media (display-mode: standalone) {
+    body {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    input,
+    textarea {
+      user-select: text;
+    }
+  }
+
+  .dark body,
+  html.dark body {
+    background: #0a0f0c;
+    color: #e2e8f0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bbf7d0;
+    border-radius: 999px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #166534;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #86efac;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #22c55e;
+  }
+}
+
+@layer utilities {
+  .card-hover {
+    transition: all 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -8px rgb(22 163 74 / 0.15);
+  }
+
+  .dark .card-hover:hover {
+    box-shadow: 0 8px 24px -8px rgb(22 163 74 / 0.25);
+  }
+
+  .surface {
+    @apply border border-green-50 bg-white dark:border-green-900/40 dark:bg-[#111814];
+  }
+
+  .surface-muted {
+    @apply bg-green-50/30 dark:bg-green-950/30;
+  }
+
+  .text-primary {
+    @apply text-slate-900 dark:text-slate-100;
+  }
+
+  .text-secondary {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+
+  .text-muted {
+    @apply text-slate-400 dark:text-slate-500;
+  }
+
+  .hover-surface {
+    @apply hover:bg-green-50 dark:hover:bg-green-950/50;
+  }
+}
