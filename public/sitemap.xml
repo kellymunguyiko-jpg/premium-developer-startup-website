@@ -3,23 +3,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
- <loc>https://urubuga-rwawe.com/</loc>
- <priority>1.0</priority>
+<loc>https://devspacelive.netlify.app/</loc>
+<priority>1.0</priority>
 </url>
 
 <url>
- <loc>https://urubuga-rwawe.com/courses</loc>
- <priority>0.8</priority>
+<loc>https://devspacelive.netlify.app/courses</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
- <loc>https://urubuga-rwawe.com/workspace</loc>
- <priority>0.8</priority>
+<loc>https://devspacelive.netlify.app/workspace</loc>
+<priority>0.8</priority>
 </url>
 
 <url>
- <loc>https://urubuga-rwawe.com/ai-tools</loc>
- <priority>0.8</priority>
+<loc>https://devspacelive.netlify.app/ai-tools</loc>
+<priority>0.8</priority>
 </url>
 
 </urlset>
